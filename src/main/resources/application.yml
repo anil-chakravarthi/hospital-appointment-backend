@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: HospitalAppointmentSystem
+
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521/XEPDB1
+    username: hospital
+    password: hospital
+
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.OracleDialect
+    hibernate:
+      ddl-auto: update
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
