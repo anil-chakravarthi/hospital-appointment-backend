@@ -7,6 +7,8 @@ public class AppointmentResponseDTO {
 	private Long appointmentId;
     private Long patientId;
     private String patientName;
+    private Integer patientAge;  
+    private String patientGender;
     private Long doctorId;
     private String doctorName;
     private LocalDate appointmentDate;
@@ -28,6 +30,19 @@ public class AppointmentResponseDTO {
 	}
 	public void setPatientName(String patientName) {
 		this.patientName = patientName;
+	}
+	
+	public Integer getPatientAge() {
+		return patientAge;
+	}
+	public void setPatientAge(Integer patientAge) {
+		this.patientAge = patientAge;
+	}
+	public String getPatientGender() {
+		return patientGender;
+	}
+	public void setPatientGender(String patientGender) {
+		this.patientGender = patientGender;
 	}
 	public Long getDoctorId() {
 		return doctorId;

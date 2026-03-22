@@ -9,16 +9,21 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "appointments")
 public class Appointment {
 
-	@Id
-	@Column
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long appointmentId;
+	 @Id
+	    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "appointment_seq")
+	    @SequenceGenerator(
+	        name = "appointment_seq",
+	        sequenceName = "APPOINTMENT_SEQ",
+	        allocationSize = 1
+	    )
+	    private Long appointmentId;
 	
 	@ManyToOne
 	@JoinColumn(name = "patient_id", nullable = false)
