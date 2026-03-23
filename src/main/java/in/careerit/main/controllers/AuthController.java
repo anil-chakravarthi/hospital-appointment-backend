@@ -16,7 +16,7 @@ import in.careerit.main.services.UserService;
 
 @RestController
 @RequestMapping("/auth")
-
+@CrossOrigin(origins = "https://hospital-appointment-frontend-m2i9.vercel.app")
 public class AuthController {
 
     @Autowired
