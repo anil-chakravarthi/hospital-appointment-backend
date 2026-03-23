@@ -15,7 +15,7 @@ import in.careerit.main.services.UserService;
 
 @RestController
 @RequestMapping("/users")
-@CrossOrigin
+
 public class UserController {
 
 	@Autowired
